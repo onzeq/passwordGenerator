@@ -33,10 +33,6 @@ class generator:
 
 
 def main():
-    
-    string = 'asdfg'
-    print(string[2])
-
     gen = generator()
 
     if args.spec_char:
