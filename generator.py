@@ -17,6 +17,7 @@ class generator:
             self.char_string += self.spec_string*5
         else: self.char_string += string
 
+    
     def generate(self, pw_size:int = 25):
         password = ''
         length: int = len(self.char_string)
@@ -24,12 +25,6 @@ class generator:
             password += self.char_string[randint(0,length-1)]
         
         return password
-
-
-
-
-
-
 
 
 def main():
