@@ -1,5 +1,9 @@
 import argparse  
-from random import randint
+from random import randint, seed
+from datetime import datetime
+
+# Random number with system time
+
 
 parser = argparse.ArgumentParser(description='Options for password')
 parser.add_argument('--spec_char', type=str)
@@ -19,6 +23,7 @@ class generator:
 
     
     def generate(self, pw_size:int = 25):
+        seed(datetime.now())
         password = ''
         length: int = len(self.char_string)
         for i in range(pw_size):
